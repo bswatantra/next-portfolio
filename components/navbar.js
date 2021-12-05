@@ -1,15 +1,15 @@
-import Link from 'next/link'
+import NavLink from "./navlink";
 
 export default function Navbar() {
     return (
-        <nav id="header" className="fixed w-full z-30 top-0 text-white ">
+        <nav id="header" className="fixed w-full z-30 top-0 text-white bg-gradient-to-r from-blue-500 to-blue-800">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
                 <div className="pl-4 flex items-center">
-                    <Link
+                    <NavLink
                         className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-5xl text-bold"
                         href="/">
                         Swatantra
-                    </Link>
+                    </NavLink>
                 </div>
                 <div className="block lg:hidden pr-4">
                     <button id="nav-toggle"
@@ -25,15 +25,19 @@ export default function Navbar() {
                     id="nav-content">
                     <ul className="list-reset lg:flex justify-end flex-1 items-center">
                         <li className="mr-3">
-                            <Link className="inline-block py-2 px-4 text-black font-bold no-underline" href="/">Home</Link>
+                            <NavLink
+                                href="/">Home
+                            </NavLink>
                         </li>
                         <li className="mr-3">
-                            <Link className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                               href="/profile">Profile</Link>
+                            <NavLink
+                                href="/profile">Profile
+                            </NavLink>
                         </li>
                         <li className="mr-3">
-                            <Link className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                               href="/contact">Contact</Link>
+                            <NavLink
+                                href="/contact">Contact
+                            </NavLink>
                         </li>
                     </ul>
                     <button
