@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import hero from '../public/images/hero.svg';
 import Hero from "../components/hero";
+import Project from "../components/project";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             </Head>
 
             <Hero/>
+            <Project/>
         </div>
     );
 }
